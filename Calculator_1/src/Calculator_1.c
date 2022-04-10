@@ -24,6 +24,7 @@ int main(int argc,char *argv[])
     double *A,*B; // Первый вектор, второй вектор, результат проведения операции над векторами
     int size;
     char op; // Операция над векторами
+    double res;
     do // Цикл если пользователь захочет продолжить работу с программой
     {
         // Для корректного вывода
@@ -61,8 +62,9 @@ int main(int argc,char *argv[])
             }
             if (op == '*')
             {
-                printf("Скалярное умножение векторов: ");
-                for(int i=0;i<size;i++) printf("%lf ",A[i]*B[i]);
+                printf("Скалярное произведение векторов: ");
+                for(int i=0;i<size;i++) res += A[i]*B[i];
+                printf("%lf",res);
                 printf("\n");
             }
             else printf("Неправильно выбрана операция!");
